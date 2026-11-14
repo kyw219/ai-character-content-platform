@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-character-publisher",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "REPLACE_ME",
+      "database_id": "REPLACE_ME"
+    }
+  ],
+  "vars": {
+    "MAX_LATENESS_MINUTES": "180",
+    "RETRY_DELAY_SECONDS": "900",
+    "PUBLISH_API_URL": "https://api.example.com/posts"
+  }
+}

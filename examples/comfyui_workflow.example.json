@@ -1,0 +1,30 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 42,
+      "steps": 30,
+      "cfg": 6.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "character-token, editorial portrait"
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "low quality, artifacts"
+    }
+  },
+  "10": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "lora_name": "YOUR_LICENSED_CHARACTER_LORA.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
+    }
+  }
+}
